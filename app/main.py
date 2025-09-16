@@ -2,7 +2,6 @@ from functools import wraps
 from typing import Callable, Any
 
 
-
 def cache(func: Callable) -> Callable:
     cache_storage = {}
 
@@ -18,6 +17,4 @@ def cache(func: Callable) -> Callable:
             cache_storage[key] = result
             return result
 
-
     return wrapper
-
